@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RSYNC_OPTS="-av --delete"
+RSYNC_OPTS="-av --delete --exclude=Gemfile*"
 
 if [ $# -ne 1 ]; then
   echo "please use $0 [jus|smellman]"
