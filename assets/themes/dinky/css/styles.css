@@ -333,6 +333,15 @@ td.beforeEvent, td.afterEvent {
   background-color: #cccccc;
 }
 
+td span.time {
+  font-size: x-small;
+}
+
+td span.time:after {
+  content: "\A";
+  white-space: pre;
+}
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
