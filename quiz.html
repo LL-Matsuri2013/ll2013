@@ -1,0 +1,102 @@
+---
+layout: page
+title: LL QUIZ 2013
+tagline: Supporting tagline
+---
+{% include JB/setup %}
+
+<h2>LL QUIZ 2013</h2>
+<p>
+昨年御好評いただきましたLL QUIZを今年も開催します。ふるってご参加ください</p>
+
+<h2>スケジュール</h2>
+<ul>
+	<li>8/7 問題文公開
+	<li>8/24 10:00 会場ネットワーク内で本番用の入力を公開
+	<li>8/24 11:00 提出サーバ公開
+	<li>8/24 14:00 提出締め切り
+</ul>
+
+<h2>問題</h2>
+<p>LLNOCチームは、本会場の無線ネットワークを提供している集団です。
+ネットワーク機器の配置を考える際には図を書いて送れば良いのですが、以下のような懸念があったため、特殊な処理を施す必要がある形式で図を送信しています。
+<ul>
+	<li>ネットワークを管理する一部のマシンでは図を編集するソフトウェアが入っていないこと
+	<li>仮にPNGやJPEGといった形式で漏洩してしまった場合には、そのままの姿でWeb上にアップされてしまうこと
+</ul>
+</p>
+<p>
+LLNOCチームが送信している画像のフォーマットは次のようなものです。
+各行は、次のようにスペースで区切られた二つの数字列からなっており、左側の数字は必ず1桁です。
+<pre>
+2 020001023456578
+</pre>
+右側の数字列のうち、左側の数字と同じ部分だけ塗りつぶします。
+浮き上がってきた図形が、送信しようとしている図形です。
+
+<h2>入力例</h2>
+<pre>
+1 222222222222
+2 145681298690
+3 212124345678
+1 234567189876
+4 343333433334
+7 472226769067
+9 592226968069
+5 652222566665
+4 744444444444
+3 876542124567
+</pre>
+
+<h2>解答及び解説</h2>
+<p>
+次のように塗りつぶすことになります。
+</p>
+<p>
+<table border="1">
+<tr>
+	<td>1</td><td> </td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td>
+<td>2</td><td>2</td><td>2</td><td>2</td><td>2</td>
+</tr>
+<tr>
+<td>2</td><td> </td><td>1</td><td>4</td><td>5</td><td>6</td><td>8</td><td>1</td><td bgcolor="blue">2</td>
+<td>9</td><td>8</td><td>6</td><td>9</td><td>0</td>
+</tr>
+<tr>
+<td>3</td><td> </td><td>2</td><td>1</td><td>2</td><td>1</td><td>2</td><td>4</td><td bgcolor="blue">3</td>
+<td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+</tr>
+<tr>
+<td>1</td><td> </td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td bgcolor="blue">1</td>
+<td>8</td><td>9</td><td>8</td><td>7</td><td>6</td>
+</tr>
+<tr>
+<td>4</td><td> </td><td>3</td><td bgcolor="blue">4</td><td>3</td><td>3</td><td>3</td><td>3</td><td bgcolor="blue">4</td>
+<td>3</td><td>3</td><td>3</td><td>3</td><td bgcolor="blue">4</td>
+</tr>
+<tr>
+<td>7</td><td> </td><td>4</td><td bgcolor="blue">7</td><td>2</td><td>2</td><td>2</td><td>6</td><td bgcolor="blue">7</td>
+<td>6</td><td>9</td><td>0</td><td>6</td><td bgcolor="blue">7</td>
+</tr>
+<tr>
+<td>9</td><td> </td><td>5</td><td bgcolor="blue">9</td><td>2</td><td>2</td><td>2</td><td>6</td><td bgcolor="blue">9</td>
+<td>6</td><td>8</td><td>0</td><td>6</td><td bgcolor="blue">9</td>
+</tr>
+<tr>
+<td>5</td><td> </td><td>6</td><td bgcolor="blue">5</td><td>2</td><td>2</td><td>2</td><td>2</td><td bgcolor="blue">5</td>
+<td>6</td><td>6</td><td>6</td><td>6</td><td bgcolor="blue">5</td>
+</tr>
+<tr>
+<td>4</td><td> </td><td>7</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td>
+<td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td><td bgcolor="blue">4</td>
+</tr>
+<tr>
+<td>3</td><td> </td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>2</td><td>1</td>
+<td>2</td><td>4</td><td>5</td><td>6</td><td>7</td>
+</tr>
+</table>
+</p>
+
+<p>したがって、答えは漢字の「山」となります。</p>
+
+
