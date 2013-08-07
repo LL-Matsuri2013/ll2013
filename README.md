@@ -6,8 +6,10 @@
 * Get GitHub Account
 * Ask us to add contoributors :)
 
+### Initialize
+
     $ git clone https://github.com/LL-Matsuri2013/ll2013.git
-	$ cd ll2011
+    $ cd ll2011
     $ bundle install --binstubs
 
 ### サイトを生成する
@@ -41,15 +43,17 @@
 
 ## Deployment
 
-* Get account!!!
-* .ssh/config 的なものを以下のように編集
+* Get account before this section!!!
+
+### .ssh/config 的なものを以下のように編集
 
 
     Host ll.jus.or.jp
             User udzura
             IdentityFile ~/.ssh/id_rsa
 
-* 以下のコマンドで本番反映
+### 以下のコマンドで本番反映
+
 
     $ ./deploy.sh jus
 
