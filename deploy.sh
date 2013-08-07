@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e # stop when failed
+
 RSYNC_OPTS="-lrv --delete --exclude=Gemfile*"
 
 if [ $# -ne 1 ]; then
@@ -22,4 +24,3 @@ if [ $1 = "smellman" ]; then
   rsync $RSYNC_OPTS ../deploy/smellman.org/ synthamesk:/home/nginx/ll2013
   exit $?
 fi
-
