@@ -1,45 +1,59 @@
-# Jekyll-Bootstrap
+# LLまつり2013公式サイト by Jekyll-Bootstrap
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+## Setup
 
-## Usage
+* Get Ruby (>= 1.9.3) with bundler.gem
+* Get GitHub Account
+* Ask us to add contoributors :)
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+    $ git clone https://github.com/LL-Matsuri2013/ll2013.git
+	$ cd ll2011
+    $ bundle install --binstubs
 
-## Version
+### サイトを生成する
 
-0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
+    $ bundle exec ./bin/jekyll
 
-**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
-However, the actual API has not changed at all.
-You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
+* `_sites` と言うディレクトリに生成される（このディレクトリはgitで管理されない）
+
+### サイトの表示をローカルで確認する
+
+    $ bundle exec ./bin/jekyll --server
+      Configuration from /Users/ukondo/Documents/ll2013/_config.yml
+      Building site: /Users/ukondo/Documents/ll2013 -> /Users/ukondo/Documents/ll2013/_site
+      Successfully generated site: /Users/ukondo/Documents/ll2013 -> /Users/ukondo/Documents/ll2013/_site
+      [2013-08-07 12:47:55] INFO  WEBrick 1.3.1
+      [2013-08-07 12:47:55] INFO  ruby 1.9.3 (2013-02-22) [x86_64-darwin11.4.2]
+      [2013-08-07 12:47:55] INFO  WEBrick::HTTPServer#start: pid=18872 port=4000
+
+* localhost:4000 に立ち上がるので確認できる
 
 ## Contributing 
 
-This repository tracks 2 projects:
+* 当該ファイル.html を探して編集する
+* 必ずローカルサーバで一度は確認する
+* コミットしたら、直接masterにプッシュする
+* レビューが欲しい内容は、forkでも別ブランチでも良いので変更をプッシュ→プルリクエスト の形にすること
 
-- **Jekyll-Bootstrap Framework.**  
-  The framework for which users should clone and build their blog on top of is available in the master branch.
-  
-  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-  This is very important as it allows me to accept your pull request without having to publish a public version release.
-  
-  Small, atomic Features, bugs, etc.   
-  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
-  Please rebase as often as possible when working.   
-  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-  
-  For Big Features or major API extensions/edits:   
-  This is the one case where I'll accept pull-requests based off the master branch.
-  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
- 
-- **Jekyll-Bootstrap Documentation Website.**    
-  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
-  Please fork and contribute documentation additions to this branch only.
+## Pull Requests
 
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
+* 誤字脱字などの内容が来るはず（と嬉しいなあ）なので、コントリビュータの方々は適宜マージしてデプロイしてください
 
+## Deployment
+
+* Get account!!!
+* .ssh/config 的なものを以下のように編集
+
+
+    Host ll.jus.or.jp
+            User udzura
+            IdentityFile ~/.ssh/id_rsa
+
+* 以下のコマンドで本番反映
+
+    $ ./deploy.sh jus
+
+* // master にプッシュなりプルリクエストしたら適当なサーバに反映されるようになると良いっすね.....
 
 ## License
 

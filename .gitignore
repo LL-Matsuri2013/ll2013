@@ -11,3 +11,4 @@ Thumbs.db
 .rvmrc
 .bundle
 vendor/bundle
+bin
