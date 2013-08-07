@@ -4,7 +4,7 @@
 
 * Get Ruby (>= 1.9.3) with bundler.gem
 * Get GitHub Account
-* Ask us to add contoributors :)
+* Ask us to add contributors :)
 
 ### Initialize
 
