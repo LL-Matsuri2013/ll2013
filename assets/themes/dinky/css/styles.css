@@ -329,7 +329,7 @@ footer {
 }
 
 /* time table */
-td.beforeEvent, td.afterEvent {
+td.beforeEvent, td.afterEvent, td.break {
   background-color: #cccccc;
 }
 
