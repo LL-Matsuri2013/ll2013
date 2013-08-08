@@ -328,6 +328,11 @@ footer {
   border-top: 1px solid #D6D6D6;
 }
 
+/* time table */
+td.beforeEvent, td.afterEvent {
+  background-color: #cccccc;
+}
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
