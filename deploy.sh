@@ -2,7 +2,7 @@
 
 set -e # stop when failed
 
-RSYNC_OPTS="-lrv --delete --exclude=Gemfile*"
+RSYNC_OPTS="-lrv --delete --exclude=Gemfile* --exclude=bin"
 
 if [ $# -ne 1 ]; then
   echo "please use $0 [jus|smellman]"
