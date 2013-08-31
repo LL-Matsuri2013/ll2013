@@ -4,7 +4,7 @@ module Jekyll
   class TwitterLink < Liquid::Tag
     def initialize(tag_name, screen_name, tokens)
       super
-      @screen_name = screen_name
+      @screen_name = screen_name.strip
     end
 
     def render(context)
